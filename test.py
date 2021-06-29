@@ -121,7 +121,7 @@ if __name__ == "__main__":
     if not os.path.exists(snapshot): snapshot = snapshot.replace('best_model', 'epoch_'+str(args.max_epochs-1))
     msg = net.load_state_dict(torch.load(snapshot))
     print("self trained swin unet",msg)
-    snapshot_name = snapshot_path.split('/')[-1]
+    snapshot_name = snapshot.split('/')[-1]
 
     log_folder = './test_log/test_log_'
     os.makedirs(log_folder, exist_ok=True)
