@@ -9,3 +9,5 @@ medpy
 SimpleITK
 scipy
 h5py
+timm
+einops
