@@ -35,6 +35,13 @@ sh test.sh or python test.py --dataset Synapse --cfg configs/swin_tiny_patch4_wi
 ## Citation
 
 ```bibtex
+@InProceedings{swinunet,
+author = {Hu Cao and Yueyue Wang and Joy Chen and Dongsheng Jiang and Xiaopeng Zhang and Qi Tian and Manning Wang},
+title = {Swin-Unet: Unet-like Pure Transformer for Medical Image Segmentation},
+booktitle = {Proceedings of the European Conference on Computer Vision Workshops(ECCVW)},
+year = {2022}
+}
+
 @misc{cao2021swinunet,
       title={Swin-Unet: Unet-like Pure Transformer for Medical Image Segmentation}, 
       author={Hu Cao and Yueyue Wang and Joy Chen and Dongsheng Jiang and Xiaopeng Zhang and Qi Tian and Manning Wang},
