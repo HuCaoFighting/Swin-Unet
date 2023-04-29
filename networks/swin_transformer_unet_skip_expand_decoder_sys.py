@@ -465,7 +465,7 @@ class BasicLayer_up(nn.Module):
         attn_drop (float, optional): Attention dropout rate. Default: 0.0
         drop_path (float | tuple[float], optional): Stochastic depth rate. Default: 0.0
         norm_layer (nn.Module, optional): Normalization layer. Default: nn.LayerNorm
-        upsample (nn.Module | None, optional): Downsample layer at the end of the layer. Default: None
+        upsample (nn.Module | None, optional): upsample layer at the end of the layer. Default: None
         use_checkpoint (bool): Whether to use checkpointing to save memory. Default: False.
     """
 
