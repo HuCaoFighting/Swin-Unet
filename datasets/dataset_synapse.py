@@ -1,5 +1,6 @@
 import os
 import random
+
 import h5py
 import numpy as np
 import torch
@@ -50,18 +51,24 @@ class Synapse_dataset(Dataset):
     def __init__(self, base_dir, list_dir, split, transform=None):
         self.transform = transform  # using transform in torch!
         self.split = split
-        self.sample_list = open(os.path.join(list_dir, self.split+'.txt')).readlines()
+        self.sample_list = open(os.path.join(list_dir, self.split + '.txt')).readlines()
         self.data_dir = base_dir
 
     def __len__(self):
         return len(self.sample_list)
 
     def __getitem__(self, idx):
-        if self.split == "train":
-            slice_name = self.sample_list[idx].strip('\n')
-            data_path = os.path.join(self.data_dir, slice_name+'.npz')
+        if self.split in ["train", "val"] or self.sample_list[idx].strip('\n').split(",")[0].endswith(".npz"):
+            slice_name = self.sample_list[idx].strip('\n').split(",")[0]
+            if slice_name.endswith(".npz"):
+                data_path = os.path.join(self.data_dir, slice_name)
+            else:
+                data_path = os.path.join(self.data_dir, slice_name + '.npz')
             data = np.load(data_path)
-            image, label = data['image'], data['label']
+            try:
+                image, label = data['image'], data['label']
+            except:
+                image, label = data['data'], data['seg']
         else:
             vol_name = self.sample_list[idx].strip('\n')
             filepath = self.data_dir + "/{}.npy.h5".format(vol_name)
