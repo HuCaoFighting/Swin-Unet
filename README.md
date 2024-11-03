@@ -6,7 +6,7 @@
 
 ## 2. Prepare data
 
-- The datasets we used are provided by TransUnet's authors. [Get processed data in this link] (https://drive.google.com/drive/folders/1ACJEoTp-uqfFJ73qS3eUObQh52nGuzCd). Please go to ["./datasets/README.md"](datasets/README.md) for details, or please send an Email to jienengchen01 AT gmail.com to request the preprocessed data. If you would like to use the preprocessed data, please use it for research purposes and do not redistribute it (following the TransUnet's License).
+- The datasets we used are provided by TransUnet's authors. [Get processed data in this link] (Synapse/BTCV: https://drive.google.com/drive/folders/1ACJEoTp-uqfFJ73qS3eUObQh52nGuzCd and ACDC: https://drive.google.com/drive/folders/1KQcrci7aKsYZi1hQoZ3T3QUtcy7b--n4).
 
 ## 3. Environment
 
@@ -30,9 +30,6 @@ sh test.sh or python test.py --dataset Synapse --cfg configs/swin_tiny_patch4_wi
 
 ## Reproducibility
 
-- Questions about Dataset
-
-Many of you have asked me for datasets, and I personally would be very glad to share the preprocessed Synapse and ACDC datasets with you. However, I am not the owner of these two preprocessed datasets. Please email jienengchen01 AT gmail.com to get the processed datasets.
 
 - Codes
 
